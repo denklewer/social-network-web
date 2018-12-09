@@ -1,5 +1,4 @@
 userUrl = "http://127.0.0.1:5000/user/"
-var currentUser;
 
 init = {
     initChartPie: function () {
@@ -40,7 +39,6 @@ utils = {
             contentType: 'application/json',
             success: function(user){
                 if (user) {
-                    updateCurrentUser(user)
                     jQuery("#errorLabel").hide();
                     jQuery("#loginModal").modal("hide");
 
@@ -118,8 +116,4 @@ utils = {
         }
         document.getElementById("showUserName").innerHTML = 'Welcome, ' + currentName;
     }
-}
-
-function updateCurrentUser(user){
-    currentUser = JSON.parse(user);
 }

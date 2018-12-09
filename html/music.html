@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon2.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Shit</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="../assets/css/paper-dashboard.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="../assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+
+            <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    Menu
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="ti-pie-chart"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="user.html">
+                            <i class="ti-user"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="music.html">
+                            <i class="ti-music"></i>
+                            <p>Music</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="main-panel">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar bar1"></span>
+                            <span class="icon-bar bar2"></span>
+                            <span class="icon-bar bar3"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Music Center</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="userLoginName">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <p id="showUserName"></p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li onclick="utils.eraseSessionStorage()" ><a href="dashboard.html">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-bell"></i>
+                                    <p class="notification"></p>
+                                    <p>Notifications</p>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">FUCK off</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Striped Table</h4>
+                                    <p class="category">Here is a subtitle for this table</p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Album</th>
+                                            <th>Singer</th>
+                                            <th>Rating</th>
+                                            <th>Play ?</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Name 1</td>
+                                                <td>Album 1</td>
+                                                <td>Singer 1</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm  btn-icon"><img src="../assets/img/Plex-icon.jpg"
+                                                            alt="Circle Image" class="img-circle img-no-padding img-responsive"></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Name 2</td>
+                                                <td>Album 2</td>
+                                                <td>Singer 2</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><img src="../assets/img/Plex-icon1.jpg"
+                                                            alt="Circle Image" class="img-circle img-no-padding img-responsive"></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Name 3</td>
+                                                <td>Album 3</td>
+                                                <td>Singer 3</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm  btn-icon"><img src="../assets/img/Plex-icon.jpg"
+                                                            alt="Circle Image" class="img-circle img-no-padding img-responsive"></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Name 4</td>
+                                                <td>Album 4</td>
+                                                <td>Singer 4</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><img src="../assets/img/Plex-icon1.jpg"
+                                                            alt="Circle Image" class="img-circle img-no-padding img-responsive"></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Name 5</td>
+                                                <td>Album 5</td>
+                                                <td>Singer 5</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm  btn-icon"><img src="../assets/img/Plex-icon.jpg"
+                                                            alt="Circle Image" class="img-circle img-no-padding img-responsive"></btn>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="card card-plain">
+                                <div class="header">
+                                    <h4 class="title">Table on Plain Background with highlighting</h4>
+                                    <p class="category">Here is a subtitle for this table</p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Album</th>
+                                            <th>Singer</th>
+                                            <th>Rating</th>
+                                            <th>Play ?</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Name 1</td>
+                                                <td>Album 1</td>
+                                                <td>Singer 1</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Name 2</td>
+                                                <td>Album 2</td>
+                                                <td>Singer 2</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Name 3</td>
+                                                <td>Album 3</td>
+                                                <td>Singer 3</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Name 4</td>
+                                                <td>Album 4</td>
+                                                <td>Singer 4</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Name 5</td>
+                                                <td>Album 5</td>
+                                                <td>Singer 5</td>
+                                                <td>5/10</td>
+                                                <td>
+                                                    <btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!--   Core JS Files   -->
+<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="../assets/js/bootstrap-checkbox-radio.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- Custom javascript code snippets -->
+<script type="text/javascript" src="../assets/js/main.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+</html>

@@ -41,6 +41,7 @@ utils = {
                 if (user) {
                     jQuery("#errorLabel").hide();
                     jQuery("#loginModal").modal("hide");
+                    currentUser = JSON.parse(user);
 
                     sessionStorage.setItem('username', currentUser.email);
                     sessionStorage.setItem('firstname', currentUser.name);

@@ -1,4 +1,4 @@
-userUrl = "http://127.0.0.1:5000/user/"
+userUrl = "http://35.204.169.59:29000/user/"
 
 init = {
     initChartPie: function () {

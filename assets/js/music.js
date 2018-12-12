@@ -85,7 +85,8 @@ console.log('music');
                         tableParent.appendChild(table);
                     }
                     else {
-                        var message = document.createTextNode("Your collection is empty");
+                        var message = document.createElement("div");
+                        message.innerText = "Your collection is empty";
                         tableParent.appendChild(message);
                     }
                    },

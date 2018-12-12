@@ -30,6 +30,52 @@
 
 <body>
 
+<div class="modal" id="add-music-modal" tabindex="-1" role="dialog" aria-labelledby="addMusicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-2">
+                <div class="md-form mb-5">
+                    <i>Name</i>
+                    <input id="musicAddForm-name" class="form-control validate" placeholder="Music add"
+                           required>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i>Singer</i>
+                    <input id="musicAddForm-singer" class="form-control validate" placeholder="Singer name"
+                           required>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i>Singer</i>
+                    <input id="musicAddForm-album" class="form-control validate" placeholder="Singer name"
+                           required>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i>Singer</i>
+                    <input type="number" id="musicAddForm-rating" class="form-control validate" placeholder="Singer name"
+                           required>
+                </div>
+
+                <i style="color:red" id="errorMessage" hidden></i>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
     <div class="wrapper">
@@ -116,9 +162,14 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <div class="card">
-                                <div class="header">
-                                    <h4 class="title">Striped Table</h4>
-                                    <p class="category">Here is a subtitle for this table</p>
+                                <div class="header row">
+                                    <div class="col-sm-10">
+                                        <h4 class="title">Striped Table</h4>
+                                        <p class="category">Here is a subtitle for this table</p>
+                                    </div>
+                                    <div class="coll">
+                                        <button type="button" class="btn btn-info add-new" data-toggle="modal" data-target="#add-music-modal"><i class="fa fa-plus"></i> Add New</button>
+                                    </div>
                                 </div>
                                 <div class="content table-responsive" id="music-table-holder">
                                 </div>
@@ -130,6 +181,8 @@
                 </div>
             </div>
         </div>
+
+    </div>
 
     </div>
 </body>

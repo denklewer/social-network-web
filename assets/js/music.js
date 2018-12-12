@@ -1,4 +1,4 @@
-musicUrl = "http://127.0.0.1:5000/music/"
+musicUrl = "http://35.204.169.59:29000/music/"
 $(document).ready(function () {
     utils.displayUserName();
     load_music();

@@ -21,7 +21,7 @@ function createMusicRow(music, i){
     var playCell = document.createElement('td');
     var playBtn = document.createElement('btn');
     playBtn.className = 'btn btn-sm  btn-icon';
-    playBtn.onclick = 'playAudio(bensound-'+name+'.mp3)';
+    playBtn.addEventListener("click", playAudio(name));
     playBtn.innerHTML = '<img src="../assets/img/Plex-icon.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">';
     playCell.appendChild(playBtn);
 

@@ -1,13 +1,62 @@
-userUrl = "http://35.204.169.59:29000/user/"
+userUrl = "http://127.0.0.1:5000/user/"
 var currentUser;
-
-
 $(document).ready(function () {
     getCurrentUser();
+    getTeam();
+
 });
+
+function createTeamRow(teamMember, i){
+    var li = document.createElement('li');
+    var row = li.appendChild(document.createElement('div'));
+    row.className = 'row';
+    var avatarCol = document.createElement('div');
+    avatarCol.className = 'col-xs-3';
+    avatarCol.innerHTML = ' <div class="avatar"> ' +
+        '<img src="../assets/img/img-'+((i)%3+1)+ '.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive"> </div>'
+    row.appendChild(avatarCol);
+    var nameCol = document.createElement('div');
+    nameCol.className = 'col-xs-6';
+    nameCol.innerHTML = teamMember.lastname + '<br />' + '<span class="text-muted"><small>Offline</small></span>';
+    row.appendChild(nameCol);
+    var convertCol = document.createElement('div');
+    convertCol.className = 'col-xs-3 text-right';
+    convertCol.innerHTML = '<btn class="btn btn-sm btn-success btn-icon"><i class="fa fa-envelope"></i></btn>'
+    row.appendChild(convertCol);
+    return row;
+}
+
+function getTeam(){
+    var email=sessionStorage.getItem('username');
+    var members={};
+        if (email){
+        data = {"email": email};
+        $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            url: userUrl + "team",
+            contentType: 'application/json',
+            success:function(response){
+                members = JSON.parse(response);
+                var teamList = document.getElementById("team_members");
+                teamList.innerHTML = '';
+                members.forEach(function (member, i) {
+                    if (member['email'] !== email){
+                        teamList.appendChild(createTeamRow(member, i));
+                    }
+                });
+            },
+            error: function(response){
+              alert(response.responseJSON["reason"])
+            }
+        });
+        console.log(members);
+        }
+    }
 
 function getCurrentUser(){
     var email = sessionStorage.getItem('username');
+
     if (email) {
         data = {"email": email};
         $.ajax({

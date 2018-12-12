@@ -1,4 +1,4 @@
-musicUrl = "http://127.0.0.1:5000/music/"
+musicUrl = "http://35.204.169.59:29000/music/"
 $(document).ready(function () {
     utils.displayUserName();
     load_music();
@@ -21,6 +21,7 @@ function createMusicRow(music, i){
     var playCell = document.createElement('td');
     var playBtn = document.createElement('btn');
     playBtn.className = 'btn btn-sm  btn-icon';
+    playBtn.onclick = 'playAudio(bensound-'+name+'.mp3)';
     playBtn.innerHTML = '<img src="../assets/img/Plex-icon.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">';
     playCell.appendChild(playBtn);
 
@@ -95,4 +96,12 @@ console.log('music');
                 }
             });
         }
+}
+
+function playAudio(filename) {
+    {
+        var url = "http://35.204.169.59/social-network-web/music/" + filename
+        var a = new Audio(url);
+        a.play();
+    }
 }

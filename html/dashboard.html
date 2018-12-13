@@ -51,14 +51,13 @@
                     </div>
 
                     <div class="md-form mb-4">
-                        <label class="form-check-label pull-left"  id="errorLabel"></label>
+                        <label class="form-check-label pull-left" id="errorLabel"></label>
                     </div>
 
                 </div>
                 <div class="modal-footer">
-                    <label class="form-check-label pull-left" for="rememberCheck">
-                        Remember ➱ </label>
-                    <input class="form-check-input pull-left" type="checkbox" value="" id="rememberCheck">
+                    <label class="form-check-label pull-left">
+                        Your session will be remembered for a while </label>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" onclick="utils.loginFunction(this)">Login</button>
                 </div>
@@ -82,8 +81,7 @@
 
                     <div class="md-form mb-5">
                         <i>Username</i>
-                        <input id="signupForm-username" class="form-control validate" placeholder="Username"
-                               required>
+                        <input id="signupForm-username" class="form-control validate" placeholder="Username" required>
                     </div>
 
                     <div class="md-form mb-4">
@@ -186,7 +184,7 @@
                                     <li onclick="utils.eraseSessionStorage()"><a href="dashboard.html">Logout</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown" style="display: none">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-bell"></i>
                                     <p class="notification"></p>
@@ -209,132 +207,99 @@
                         <div class="col-md-10">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Some header here</h4>
-                                    <p class="category">Just something</p>
+                                    <h4 class="title">Welcome, </h4>
+                                    <p class="category">below you will find some information regarding this site</p>
                                 </div>
                                 <div class="content">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <h5>Newseller with notifications</h5>
-                                            <div class="alert alert-info">
-                                                <span>This is a plain notification</span>
-                                            </div>
-                                            <div class="alert alert-info">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span>This is a notification with close button.</span>
-                                            </div>
+                                        <div class="col-md-12">
+                                            <h5>Implemented features</h5>
                                             <div class="alert alert-info alert-with-icon" data-notify="container">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span data-notify="icon" class="ti-bell"></span>
-                                                <span data-notify="message">This is a notification with close button
-                                                    and icon.</span>
-                                            </div>
-                                            <div class="alert alert-info alert-with-icon" data-notify="container">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
                                                 <span data-notify="icon" class="ti-pie-chart"></span>
-                                                <span data-notify="message">This is a notification with close button
-                                                    and icon and have many lines. You can see that the icon and the
-                                                    close button are always vertically aligned. This is a beautiful
-                                                    notification. So you don't have to worry about the style.</span>
+                                                <span data-notify="message" style="font-size: 12pt">This website was
+                                                    created as a project team
+                                                    work of students of the Polytechnic University who are currently
+                                                    undergoing distance learning course from TU Graz.
+                                                </span>
                                             </div>
+                                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                                <span data-notify="icon" class="ti-pie-chart"></span>
+                                                <span data-notify="message" style="font-size: 12pt">Since none of us
+                                                    had come across the creation
+                                                    of the website, we decided to use as many new technologies as we
+                                                    will only have time to apply.
+                                                </span>
+                                            </div>
+                                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                                <span data-notify="icon" class="ti-pie-chart"></span>
+                                                <span data-notify="message" style="font-size: 12pt">We had to create
+                                                    system website with simple ajax queries to the MongoDB.
+                                                    As a part of this task we implemented next features:</span>
+                                            </div>
+                                            <div class="alert alert-success" style="font-size: 12pt">
+                                                <span><b> Authentication - </b> you may authenticate on this website
+                                                    using next login credentials: <br>
+                                                    login: test2@test.com <br>
+                                                    password: pass</span>
+                                            </div>
+                                            <div class="alert alert-success" style="font-size: 12pt">
+                                                <span><b> Authorization - </b> Authenticated users will be authorized.
+                                                </span>
+                                            </div>
+                                            <div class="alert alert-success" style="font-size: 12pt">
+                                                <span><b> Registration - </b> You can either register your own user.
+                                                    But your user won't have
+                                                    any music available. </span>
+                                            </div>
+                                            <div class="alert alert-warning" style="font-size: 12pt">
+                                                <span><b> Profile - </b> Each user has his own profile, that might be
+                                                    updated via frontend.
+                                                    Also we implemented feature as "team". </span>
+                                            </div>
+                                            <div class="alert alert-warning" style="font-size: 12pt">
+                                                <span><b> Music - </b> We retrieve from MongoDB user's music and play
+                                                    it. </span>
+                                            </div>
+
                                         </div>
-                                        <div class="col-md-6">
-                                            <h5>Notification states & colors</h5>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5>Technologies</h5>
                                             <div class="alert alert-info">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span><b> Info - </b> This is a regular notification made with
-                                                    ".alert-info"</span>
+                                                <span><b>HTML5 & JS - </b> to form main structure and concatinate
+                                                    backend with frontend.</span>
                                             </div>
                                             <div class="alert alert-success">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span><b> Success - </b> This is a regular notification made with
-                                                    ".alert-success"</span>
+                                                <span><b> Bootstrap - </b> framework for the layout, including
+                                                    wrapping containers, a powerful grid system, a flexible media
+                                                    object, and responsive utility classes.</span>
                                             </div>
                                             <div class="alert alert-warning">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span><b> Warning - </b> This is a regular notification made with
-                                                    ".alert-warning"</span>
+                                                <span><b> MongoDB - </b> backend database, which holds users,
+                                                    profiles, links, musics, and so on.</span>
                                             </div>
                                             <div class="alert alert-danger">
-                                                <button type="button" aria-hidden="true" class="close">×</button>
-                                                <span><b> Danger - </b> This is a regular notification made with
-                                                    ".alert-danger"</span>
+                                                <span><b> Python - </b> backend logic written on Python is used to
+                                                    union the frontend and the backend. The frontend doesn't have any
+                                                    direct access to the MongoDB.</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="places-buttons">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h5>Continue here
-                                                    <p class="category">Category select</p>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="center">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-5">
-                                <div class="card">
-                                    <div class="header">
-                                        <h4 class="title">Place some staticsics here e.g. amount of users and so on</h4>
-                                        <p class="category">Just something</p>
-                                    </div>
-                                    <div class="content">
-                                        <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                                        <div class="footer">
-                                            <div class="chart-legend">
-                                                <i class="fa fa-circle text-info"></i> Om
-                                                <i class="fa fa-circle text-danger"></i> Nom
-                                                <i class="fa fa-circle text-warning"></i> Nom
-                                            </div>
-                                            <hr>
-                                            <div class="stats">
-                                                <i class="ti-timer"></i> Specify timer option here
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-5">
-                                <div class="card ">
-                                    <div class="header">
-                                        <h4 class="title">Some chart</h4>
-                                        <p class="category">Category</p>
-                                    </div>
-                                    <div class="content">
-                                        <div id="chartActivity" class="ct-chart"></div>
 
-                                        <div class="footer">
-                                            <div class="chart-legend">
-                                                <i class="fa fa-circle text-info"></i> Func 1
-                                                <i class="fa fa-circle text-warning"></i> Func 2
-                                            </div>
-                                            <hr>
-                                            <div class="stats">
-                                                <i class="ti-check"></i> Footer
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
-
-
         </div>
+
+
+
     </div>
 
 </body>
@@ -360,7 +325,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        init.initChartPie();
         utils.ensureAuthentication()
     });
 

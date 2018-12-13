@@ -8,6 +8,7 @@ $(document).ready(function () {
 
 function createMusicRow(music, i){
     var row = document.createElement('tr');
+    row.addEventListener("click", function() {playAudio('bensound-'+music['name']+'.mp3')});
     var number = document.createElement('td');
     number.innerText = i+1;
     var name = document.createElement('td');
@@ -18,19 +19,18 @@ function createMusicRow(music, i){
     singer.innerText = (music['singer']);
     var rating = document.createElement('td');
     rating.innerText = (music['rating']);
-    var playCell = document.createElement('td');
-    var playBtn = document.createElement('btn');
-    playBtn.className = 'btn btn-sm  btn-icon';
-    playBtn.addEventListener("click", function() {playAudio('bensound-'+music['name']+'.mp3')});
-    playBtn.innerHTML = '<img src="../assets/img/Plex-icon.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">';
-    playCell.appendChild(playBtn);
+    // var playCell = document.createElement('td');
+    // var playBtn = document.createElement('btn');
+    // playBtn.className = 'btn btn-sm  btn-icon'; 
+    // playBtn.innerHTML = '<img src="../assets/img/Plex-icon.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">';
+    // playCell.appendChild(playBtn);
 
     row.appendChild(number);
     row.appendChild(name);
     row.appendChild(album);
     row.appendChild(singer);
     row.appendChild(rating);
-    row.appendChild(playCell);
+    //row.appendChild(playCell);
     return row;
 }
 
@@ -38,7 +38,7 @@ function createMusicRow(music, i){
 
 function createTable(){
     var table = document.createElement('table');
-    table.className = 'table table-striped';
+    table.className = 'table table-hover';
     var header = document.createElement('thead');
     table.appendChild(header);
     var content = document.createElement('tr');
@@ -47,7 +47,7 @@ function createTable(){
     content.appendChild(createCol('Album'));
     content.appendChild(createCol('Singer'));
     content.appendChild(createCol('Rating'));
-    content.appendChild(createCol('Play'));
+    //content.appendChild(createCol('Play'));
     header.appendChild(content);
 
     return table;
@@ -100,8 +100,12 @@ console.log('music');
 
 function playAudio(filename) {
     {
-        var url = "http://35.204.169.59/social-network-web/music/" + filename
+        var source = document.getElementById("audioSource");
+        var player = document.getElementById("audioPlayer");
+        var url = "http://35.204.169.59/social-network-web/music/" + filename;
         var a = new Audio(url);
-        a.play();
+        source.src = url;
+        player.load();
+        player.play();
     }
 }
